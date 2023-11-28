@@ -16,7 +16,7 @@ export const NavbarMenu = () => {
       </Navbar.Brand>
 
       <Nav>
-      <Nav.Link as={Link} to="/characters">
+        <Nav.Link as={Link} to="/characters">
           Characters
         </Nav.Link>
         <Nav.Link as={Link} to="/planets">

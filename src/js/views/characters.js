@@ -81,9 +81,45 @@ export const Characters = () => {
           role to play in the struggle between good and evil.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Luke Skywalker" },
+                  { label: "Birthplace", value: "Tatooine" },
+                  { label: "Affiliation", value: "Rebel Alliance, Jedi Order" },
+                  { label: "Species", value: "Human" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Occupation", value: "Jedi Knight" },
+                  { label: "Height", value: "1.72 meters" },
+                  { label: "Lightsaber Color", value: "Blue" },
+                  { label: "Master", value: "Yoda, Obi-Wan Kenobi" },
+                  { label: "Apprentices", value: "Ben Solo (Kylo Ren)" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
 
@@ -127,9 +163,48 @@ export const Characters = () => {
           Skywalker as a mentor.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {[
+                  { label: "Name", value: "Obi-Wan Kenobi" },
+                  { label: "Birthplace", value: "Stewjon" },
+                  {
+                    label: "Affiliation",
+                    value: "Jedi Order, Galactic Republic",
+                  },
+                  { label: "Species", value: "Human" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {[
+                  { label: "Occupation", value: "Jedi Master" },
+                  { label: "Height", value: "1.77 meters" },
+                  { label: "Lightsaber Color", value: "Blue" },
+                  { label: "Master", value: "Qui-Gon Jinn" },
+                  {
+                    label: "Apprentices",
+                    value: "Anakin Skywalker, Ahsoka Tano",
+                  },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
 
@@ -179,11 +254,48 @@ export const Characters = () => {
           seemingly inexhaustible will.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Leia Organa" },
+                  { label: "Birthplace", value: "Polis Massa" },
+                  { label: "Affiliation", value: "Rebel Alliance, Resistance" },
+                  { label: "Species", value: "Human" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Occupation", value: "Princess, Senator, General" },
+                  { label: "Height", value: "1.50 meters" },
+                  { label: "Lightsaber Color", value: "None" },
+                  { label: "Master", value: "Luke Skywalker" },
+                  { label: "Apprentices", value: "Rey" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
+
       {/*HAN SOLO*/}
       <Card
         className="col-md-4 mb-4 mx-auto"
@@ -227,11 +339,48 @@ export const Characters = () => {
           shattering confrontation with his estranged son Ben.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Han Solo" },
+                  { label: "Birthplace", value: "Corellia" },
+                  { label: "Affiliation", value: "Rebel Alliance, Resistance" },
+                  { label: "Species", value: "Human" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Occupation", value: "Smuggler, Captain" },
+                  { label: "Height", value: "1.80 meters" },
+                  { label: "Lightsaber Color", value: "None" },
+                  { label: "Master", value: "None" },
+                  { label: "Apprentices", value: "None" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
+
       {/*CHEWBACCA*/}
       <Card
         className="col-md-4 mb-4 mx-auto"
@@ -276,11 +425,48 @@ export const Characters = () => {
           loyalty to his friends.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Chewbacca" },
+                  { label: "Birthplace", value: "Kashyyyk" },
+                  { label: "Affiliation", value: "Rebel Alliance, Resistance" },
+                  { label: "Species", value: "Wookiee" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Occupation", value: "Smuggler, Resistance Hero" },
+                  { label: "Height", value: "7.3 feet" },
+                  { label: "Lightsaber Color", value: "None" },
+                  { label: "Master", value: "None" },
+                  { label: "Apprentices", value: "None" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
+
       {/*YODA*/}
       <Card
         className="col-md-4 mb-4 mx-auto"
@@ -322,11 +508,55 @@ export const Characters = () => {
           immortality.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Yoda" },
+                  { label: "Birthplace", value: "Unknown" },
+                  {
+                    label: "Affiliation",
+                    value: "Jedi Order, Galactic Republic, Rebel Alliance",
+                  },
+                  { label: "Species", value: "Yoda's species" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Occupation", value: "Jedi Grand Master" },
+                  { label: "Height", value: "0.66 meters" },
+                  { label: "Lightsaber Color", value: "Green" },
+                  { label: "Master", value: "Huyang" },
+                  {
+                    label: "Apprentices",
+                    value:
+                      "Count Dooku, Mace Windu, Qui-Gon Jinn, Obi-Wan Kenobi, Anakin Skywalker, Luke Skywalker",
+                  },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
+
       {/*DARTHVADER*/}
       <Card
         className="col-md-4 mb-4 mx-auto"
@@ -371,11 +601,55 @@ export const Characters = () => {
           detractors. But there was still good in him…
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "Darth Vader" },
+                  { label: "Birthplace", value: "Tatooine" },
+                  { label: "Affiliation", value: "Sith, Galactic Empire" },
+                  { label: "Species", value: "Human" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  {
+                    label: "Occupation",
+                    value: "Sith Lord, Jedi Knight (formerly)",
+                  },
+                  { label: "Height", value: "2.02 meters" },
+                  { label: "Lightsaber Color", value: "Red" },
+                  { label: "Master", value: "Darth Sidious" },
+                  {
+                    label: "Apprentices",
+                    value:
+                      "Ahsoka Tano (formerly), Galen Marek (Starkiller), The Inquisitors",
+                  },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
+
       {/*R2-D2*/}
       <Card
         className="col-md-4 mb-4 mx-auto"
@@ -417,9 +691,52 @@ export const Characters = () => {
           unlikely but enduring friendship with the fussy protocol droid C-3PO.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Left side information */}
+                {[
+                  { label: "Name", value: "R2-D2" },
+                  { label: "Manufacturer", value: "Industrial Automaton" },
+                  {
+                    label: "Affiliation",
+                    value:
+                      "Galactic Republic, Rebel Alliance, Jedi Order, Resistance",
+                  },
+                  { label: "Model", value: "R2-series astromech droid" },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6">
+                {/* Right side information */}
+                {[
+                  { label: "Height", value: "0.96 meters" },
+                  { label: "Gender", value: "Masculine programming" },
+                  { label: "Sensor Color", value: "Red" },
+                  {
+                    label: "Equipment",
+                    value:
+                      "Various tools, Fire extinguisher, Electric shock prod, Holographic projector",
+                  },
+                ].map((info, index) => (
+                  <div key={index}>
+                    <strong>{info.label}:</strong> {info.value}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Close button at the bottom */}
+            <div className="row justify-content-end">
+              <div className="col-md-12 text-right">
+                <Button variant="dark" onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
     </div>
