@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Image, Nav, DropdownButton, Dropdown } from "react-bootstrap";
 
-export const NavbarMenu = () => {
+export const NavbarMenu = ({favoriteCharacter }) => {
   return (
     <Navbar>
       <Navbar.Brand>
@@ -21,6 +21,9 @@ export const NavbarMenu = () => {
         </Nav.Link>
         <Nav.Link as={Link} to="/planets">
           Planets
+        </Nav.Link>
+        <Nav.Link as={Link} to="/favorites">
+          Favorites
         </Nav.Link>
       </Nav>
       <DropdownButton

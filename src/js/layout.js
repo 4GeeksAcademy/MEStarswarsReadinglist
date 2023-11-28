@@ -13,6 +13,7 @@ import { NavbarMenu } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Planets } from "./views/planets";
 import { Characters } from "./views/characters";
+import { Favorites } from "./views/favorites";
 
 //create your first component
 const Layout = () => {
@@ -36,6 +37,7 @@ const Layout = () => {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/planets" element={<Planets />} />
                 <Route exact path="/characters" element={<Characters />} />
+                <Route exact path="/favorites" element={<Favorites />} />
                 <Route path="*" element={<h1>Not found!</h1>} />
               </Routes>
             </Col>
