@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Image, Nav, DropdownButton, Dropdown } from "react-bootstrap";
+import { Context } from "../store/appContext";
 
-export const NavbarMenu = ({favoriteCharacter }) => {
+export const NavbarMenu = () => {
+  const { store, actions } = useContext(Context);
+
   return (
     <Navbar>
       <Navbar.Brand>
@@ -16,14 +19,11 @@ export const NavbarMenu = ({favoriteCharacter }) => {
       </Navbar.Brand>
 
       <Nav>
-        <Nav.Link as={Link} to="/characters">
-          Characters
+        <Nav.Link as={Link} to="/favorites">
+          People
         </Nav.Link>
         <Nav.Link as={Link} to="/planets">
           Planets
-        </Nav.Link>
-        <Nav.Link as={Link} to="/favorites">
-          Favorites
         </Nav.Link>
       </Nav>
       <DropdownButton
@@ -32,9 +32,11 @@ export const NavbarMenu = ({favoriteCharacter }) => {
         className="ms-auto"
         variant="dark"
       >
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">
+          {store.favorites.map((favorite) => {
+            return <div>{favorite.name}</div>;
+          })}
+        </Dropdown.Item>
       </DropdownButton>
     </Navbar>
   );

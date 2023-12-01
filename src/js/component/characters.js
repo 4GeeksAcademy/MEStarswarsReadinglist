@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-
+ 
 export const Characters = () => {
   const [showLukeModal, setShowLukeModal] = useState(false);
   const [showR2Modal, setShowR2Modal] = useState(false);
@@ -14,7 +14,7 @@ export const Characters = () => {
   const [showDarthModal, setShowDarthModal] = useState(false);
 
   
-
+ 
   const handleClose = () => {
     setShowLukeModal(false);
     setShowR2Modal(false);

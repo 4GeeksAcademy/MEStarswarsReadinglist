@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
+// import { useContext } from "react";
 
 import ScrollToTop from "./component/scrollToTop";
 
@@ -11,42 +12,46 @@ import injectContext from "./store/appContext";
 
 import { NavbarMenu } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Planets } from "./views/planets";
-import { Characters } from "./views/characters";
-import { Favorites } from "./views/favorites";
+import { Planets } from "./component/planets";
+import { Characters } from "./component/characters";
+import { Favorites } from "./component/favorites";
+// import { FavWrapper, FavContext } from "./component/FavContext";
 
 //create your first component
 const Layout = () => {
+  // const {store, actions} = useContext(FavContext);
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
 
   return (
-    <Container>
-      <BrowserRouter basename={basename}>
-        <ScrollToTop>
-          <Row>
-            <Col>
-              <NavbarMenu />
-            </Col>
-          </Row>
+    
+      <Container>
+        <BrowserRouter basename={basename}>
+          <ScrollToTop>
+            <Row>
+              <Col>
+                <NavbarMenu />
+              </Col>
+            </Row>
 
-          <Row>
-            <Col>
-              <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/planets" element={<Planets />} />
-                <Route exact path="/characters" element={<Characters />} />
-                <Route exact path="/favorites" element={<Favorites />} />
-                <Route path="*" element={<h1>Not found!</h1>} />
-              </Routes>
-            </Col>
-          </Row>
+            <Row>
+              <Col>
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route exact path="/planets" element={<Planets />} />
+                  <Route exact path="/characters" element={<Characters />} />
+                  <Route exact path="/favorites" element={<Favorites />} />
+                  <Route path="*" element={<h1>Not found!</h1>} />
+                </Routes>
+              </Col>
+            </Row>
 
-          <Footer />
-        </ScrollToTop>
-      </BrowserRouter>
-    </Container>
+            <Footer />
+          </ScrollToTop>
+        </BrowserRouter>
+      </Container>
+    
   );
 };
 
