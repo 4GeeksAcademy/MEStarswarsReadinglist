@@ -89,7 +89,7 @@ export const Planets = () => {
                 <div className="container">
                   <div className="row justify-content-end">
                     <div className="col-md-12 text-right">
-                      <Button variant="dark" onClick={handleClose}>
+                      <Button variant="dark" onClick={() => handleClose(index)}>
                         Close
                       </Button>
                       <Button
