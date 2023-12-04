@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 export const NavbarMenu = () => {
   const { store, actions } = useContext(Context);
 
+  
   return (
     <Navbar>
       <Navbar.Brand>

@@ -6,19 +6,27 @@ import { Context } from "../store/appContext";
 
 export const Favorites = () => {
   const { store, actions } = useContext(Context);
-  const [showLukeModal, setShowLukeModal] = useState(false);
+  const [showModal, setShowModal] = useState({});
 
-  const handleClose = () => {
-    setShowLukeModal(false);
+  const handleDelete = (index) => {
+    actions.deleteFavorite(index);
   };
 
-  const handleShowLuke = () => setShowLukeModal(true);
+  
+  const handleShow = (index) => {
+    setShowModal({ ...showModal, [index]: true });
+  };
+
+  const handleClose = (index) => {
+    setShowModal({ ...showModal, [index]: false });
+  };
 
   return (
     <div className="row mb-4">
       {store.people.map((character, index) => {
         return (
           <Card
+            key={index}
             className="col-md-4 mb-4 mx-auto"
             style={{
               width: "100%",
@@ -35,32 +43,44 @@ export const Favorites = () => {
               <div>
                 <Button
                   variant="dark"
-                  onClick={handleShowLuke}
+                  onClick={() => handleShow(index)}
                   style={{ marginBottom: "10px" }}
                 >
-                  Click Here to learn more about Luke!
+                  Click Here to learn more about {character.Name}!
                 </Button>
+
                 <button
                   className="favorite"
                   onClick={() =>
                     actions.addtoFavorites(character.Name, "characters")
                   }
                 >
-                  <img
-                    src="https://www.svgrepo.com/show/114534/favorite.svg"
-                    alt="favorite"
-                    style={{ width: "15%", height: "30%" }}
-                  />
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <p style={{ margin: 0, marginRight: "5px" }}>
+                      Add to Favorites
+                    </p>
+                    <img
+                      src="https://www.svgrepo.com/show/114534/favorite.svg"
+                      alt="favorite"
+                      style={{ width: "15%", height: "30%" }}
+                    />
+                  </div>
                 </button>
               </div>
             </Card.Body>
 
-            <Modal show={showLukeModal} onHide={handleClose}>
+            <Modal show={showModal[index]} onHide={() => handleClose(index)}>
               <Modal.Header>
                 <Modal.Title>
                   <img
-                    src="https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_7ffe21c7.jpeg?region=130%2C147%2C1417%2C796"
-                    alt="Luke"
+                    src={character.imageurl}
+                    alt={character.Name}
                     style={{ width: "100%" }}
                   />
                 </Modal.Title>
@@ -103,11 +123,18 @@ export const Favorites = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Close button at the bottom */}
+
                   <div className="row justify-content-end">
                     <div className="col-md-12 text-right">
                       <Button variant="dark" onClick={handleClose}>
                         Close
+                      </Button>
+                      <Button
+                        variant="danger"
+                        style={{ marginLeft: "10px" }}
+                        onClick={() => handleDelete(index)}
+                      >
+                        Delete from favorites
                       </Button>
                     </div>
                   </div>
