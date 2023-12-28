@@ -1,3 +1,16 @@
-.card{
-    display: inline-block
+.card {
+    display: inline-block;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center text content */
+  }
+
+  .card img:hover {
+    opacity: 0.8;
 }
+
+.card button {
+    background-color: #555;
+    color: #fff;
+    border-color: #555;
+}
+

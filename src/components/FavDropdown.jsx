@@ -13,7 +13,7 @@ function FavDropdown() {
 
   return (
       <Dropdown>
-        <Dropdown.Toggle variant="primary" id="dropdown-basic">
+        <Dropdown.Toggle variant="primary" id="dropdown-basic" className="ml-auto">
           Favorites 
         </Dropdown.Toggle>
 
