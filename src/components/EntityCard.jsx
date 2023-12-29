@@ -4,12 +4,13 @@ import { useContext } from "react";
 import { Card } from "react-bootstrap/";
 import { FavoritesContext } from "../Favorites";
 import { Link } from "react-router-dom"
+import '/workspaces/MEStarswarsReadinglist/src/index.css'
 
 function EntityCard({ data }) {
   const { store, actions } = useContext(FavoritesContext);
 
   return (
-    <Card style={{ width: "18rem", margin: "30px" }}>
+    <Card className="entity-card" style={{ width: "18rem" }}>
       <Card.Img
         variant="top"
         src={`https://starwars-visualguide.com/assets/img/${data.type}/${data.uid}.jpg`}

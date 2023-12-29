@@ -1,8 +1,8 @@
 .card {
-    display: inline-block;
-    margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Center text content */
-  }
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
 
   .card img:hover {
     opacity: 0.8;
@@ -14,3 +14,47 @@
     border-color: #555;
 }
 
+.characters-heading {
+  text-align: center;
+  background-color: #adaee9;
+  padding: 10px;
+}
+
+.characters-heading-container {
+  text-align: center;
+  background-color: #e0e0e0; 
+  padding: 10px; 
+}
+
+.characters-container {
+  display: inline-flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  overflow-x: scroll; 
+}
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entity-card {
+  transform: scale(0.8); 
+  margin: 0 10px; 
+  box-sizing: border-box; 
+}
+
+.entity-card .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 10px; 
+}
+
+.center-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

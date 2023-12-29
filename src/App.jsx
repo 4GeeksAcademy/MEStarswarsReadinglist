@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { FavoritesContext } from './Favorites';
 import EntityCard from './components/EntityCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '/workspaces/MEStarswarsReadinglist/src/index.css'
 
 function App() {
   const {store, actions} = useContext(FavoritesContext);
@@ -50,8 +50,19 @@ useEffect(() => {
 }, []);
 
   return (
-    <>
-      <h1>Characters</h1>
+    <div style={{ 
+      backgroundImage: 'url("https://png.pngtree.com/png-clipart/20231006/original/pngtree-star-wars-png-free-download-png-image_13130372.png")', 
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      padding: '20px'
+    }}>
+      <div className="characters-heading-container">
+        <div className="characters-heading">
+          <h1>Characters</h1>
+        </div>
+      </div>
+      <div className="characters-container">
       {
         people.map(({uid, name, url}) => {
           return (
@@ -59,7 +70,13 @@ useEffect(() => {
           )
         })
       }
+      </div>
+      <div className="characters-heading-container">
+      <div className="characters-heading">
       <h1>Planets</h1>
+      </div>
+      </div>
+      <div className="characters-container">
       {
       planets.map(({ uid, name, url }) => {
         return(
@@ -67,14 +84,21 @@ useEffect(() => {
           )
         })
       }
+      </div>
+      <div className="characters-heading-container">
+      <div className="characters-heading">
       <h1>Vehicles</h1>
+      </div>
+      </div>
+      <div className="characters-container">
       {vehicles.map(({ uid, name, url }) => {
         return(
           <EntityCard key={uid} data={{ uid, name, url, type:"vehicles" }} />
           )
         })
       }
-    </>
+      </div>
+    </div>
   )
 }
 
